@@ -1,0 +1,13 @@
+<h1>Users Index</h1>
+<%= link_to 'Add user', new_user_path %>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+      <p><%= user.name %></p>
+      <% if user.avatar.present? %>
+      <%= image_tag user.avatar.variant(:thumb) %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

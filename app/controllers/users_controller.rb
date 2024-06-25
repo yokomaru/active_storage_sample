@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.with_attached_avatar.order('created_at DESC')
   end
 
   def new
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to root_url, notice: 'Add User'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
