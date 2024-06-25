@@ -8,6 +8,7 @@
       <% if user.avatar.present? %>
       <%= image_tag user.avatar.variant(:thumb) %>
       <% end %>
+      <p><%= link_to "編集画面", edit_user_path(user) %> |</p>
     </li>
   <% end %>
 </ul>

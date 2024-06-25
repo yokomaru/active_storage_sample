@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   has_one_attached :avatar do |attachable|
     attachable.variant :thumb, resize_to_limit: [100, 100]
+    attachable.variant :edit_page, resize_to_limit: [500, 500]
   end
 
   private

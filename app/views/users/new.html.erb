@@ -1,10 +1,6 @@
 <h1>Add User</h1>
 
-
-
 <%= form_with model: @user, local: true do |form| %>
-
-  <%= render 'shared/error_messages', model: form.object %>
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -12,7 +8,7 @@
 
   <div>
     <%= form.label :avatar %>
-    <%= form.file_field :avatar , accept: 'image/png,image/gif,image/jpeg' %>
+    <%= form.file_field :avatar %>
   </div>
 
   <div>
