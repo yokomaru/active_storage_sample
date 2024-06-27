@@ -58,6 +58,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'i18n_generators'
 end
 
 group :test do
@@ -65,3 +66,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'rails-i18n'
