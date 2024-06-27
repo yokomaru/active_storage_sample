@@ -13,7 +13,7 @@
       <% if @user.avatar.present? %>
         <%= image_tag @user.avatar.variant(:edit_page) %>
       <% end %>
-    <%= form.file_field :avatar , accept: 'image/png,image/gif,image/jpeg' %>
+    <%= form.file_field :avatar %>
   </div>
 
   <div>
